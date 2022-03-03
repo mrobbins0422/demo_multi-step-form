@@ -2,7 +2,7 @@
 
 Creating a multi-step form
 
-![]()
+![Screen Capture](/images/ScreenCap_2022-0302-1857.png)
 
 ## 🌎 Introduction  
 
