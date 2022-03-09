@@ -2,7 +2,7 @@
 
 Creating a multi-step form
 
-![]()
+![Project Screen Capture](/images/ScreenCapStep1.png)
 
 ## 🌎 Introduction
 
