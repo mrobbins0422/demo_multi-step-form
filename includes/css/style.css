@@ -132,7 +132,7 @@ div[data-icon2]::before {
   display: block;
   position: relative;
   top: 13px;
-  left: -94px;
+  left: -93px;
   background-color: var(--clr-light);
 /*   background-color: var(--clr-accent); */
   width: 94px;
