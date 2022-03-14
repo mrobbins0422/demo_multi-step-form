@@ -14,6 +14,22 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+
+var barstatus = document.getElementById("icon-bar");
+if (n == 1) {
+  document.getElementById("icon-bar").classList.remove("lit-left");
+  document.getElementById("icon-bar").classList.remove("lit-right");
+}
+if (n == 2) {
+  document.getElementById("icon-bar").classList.add("lit-left");
+  document.getElementById("icon-bar").classList.remove("lit-right");
+}
+if (n == 3) {
+  document.getElementById("icon-bar").classList.add("lit-right");
+}
+
+
+
   var i;
   console.log(n);
   var slides = document.getElementsByClassName("mySlides");
@@ -42,3 +58,4 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
   icons[slideIndex - 1].className += " icon-lit";
 }
+

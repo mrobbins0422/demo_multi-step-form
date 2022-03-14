@@ -10,6 +10,8 @@ Nearly all complex applications have multistep forms in them somewhere. I wanted
 
 ## :sparkles: Design Considerations
 
+This is a three (3) page form.
+
 - Step number icon background color:
   - Green for active page, white for inactive page
 - Step number background color
@@ -23,7 +25,7 @@ Nearly all complex applications have multistep forms in them somewhere. I wanted
 - All PREVIOUS buttons positioned to the right.
 - On NEXT, current page wipes to left, next page wipes in from the right.
 - On PREVIOUS, current page wipes out to right, previous page wipes in from the left.
-- Unique styling for the SUBMIT button.
+- Unique styling for the SUBMIT button on form 3.
 
 ## 📚 Tools
 
@@ -31,13 +33,18 @@ HTML5, CSS3, JavaScript, Grid, Flexbox
 
 ## 👨‍🎓 What I've learned
 
-I love CSS grid! 💖  I thought I loved CSS flexbox but now I can see we are just really good friends.
+- Pseudo Elements
+- Styling pseudo elements with JavaScript
+- I love CSS grid! 💖  I thought I loved CSS flexbox but now I can see we are just really good friends.
 
 ## :sunglasses: Credits
 
 [Web Dev Simplified](https://www.youtube.com/watch?v=VdqtdKXxKhM)
 
 [W3Schools - Slideshow / Carousel](https://www.w3schools.com/howto/howto_js_slideshow.asp)
+
+[Add, Remove & Toggle CSS Classes in JavaScript - without jQuery](https://scriptverse.academy/tutorials/js-add-remove-class.html)
+
 
 
 
