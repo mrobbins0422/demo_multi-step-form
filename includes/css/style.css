@@ -155,6 +155,21 @@ div[data-icon2]::after {
 div.lit-right[data-icon2]::after {
   background-color: var(--clr-accent);
 }
+div.notlit[data-icon1] {
+  background-color: var(--clr-light);
+}
+div.lit[data-icon2] {
+  background-color: var(--clr-accent);
+}
+div.notlit[data-icon2] {
+  background-color: var(--clr-light);
+}
+div.lit[data-icon3] {
+  background-color: var(--clr-accent);
+}
+div.notlit[data-icon3] {
+  background-color: var(--clr-light);
+}
 /* Slideshow container
 ---------------------------------------------------------------------------- */
 .slideshow-container {

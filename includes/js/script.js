@@ -15,20 +15,28 @@ function currentSlide(n) {
 
 function showSlides(n) {
 
-var barstatus = document.getElementById("icon-bar");
+  // Activate the status bar
 if (n == 1) {
-  document.getElementById("icon-bar").classList.remove("lit-left");
-  document.getElementById("icon-bar").classList.remove("lit-right");
+  document.getElementById("icon1").classList.add('icon-lit')
+  document.getElementById("icon2").classList.remove("icon-lit");
+  document.getElementById("icon3").classList.remove("icon-lit");
+  document.getElementById("icon2").classList.remove("lit-left");
+  document.getElementById("icon2").classList.remove("lit-right");
 }
 if (n == 2) {
-  document.getElementById("icon-bar").classList.add("lit-left");
-  document.getElementById("icon-bar").classList.remove("lit-right");
+  document.getElementById("icon1").classList.add("icon-lit");
+  document.getElementById("icon2").classList.add("icon-lit");
+  document.getElementById('icon3').classList.remove('icon-lit');
+  document.getElementById("icon2").classList.add("lit-left");
+  document.getElementById("icon2").classList.remove("lit-right");
 }
 if (n == 3) {
-  document.getElementById("icon-bar").classList.add("lit-right");
+  document.getElementById("icon1").classList.add("icon-lit");
+  document.getElementById("icon2").classList.add("icon-lit");
+  document.getElementById("icon3").classList.add("icon-lit");
+  document.getElementById("icon2").classList.add("lit-left");
+  document.getElementById("icon2").classList.add("lit-right");
 }
-
-
 
   var i;
   console.log(n);
@@ -36,8 +44,6 @@ if (n == 3) {
   // console.log(slides);
   var dots = document.getElementsByClassName("dot");
   // console.log(dots);
-  var icons = document.getElementsByClassName("box-icon");
-  console.log(icons);
 
   if (n > slides.length) {
     slideIndex = 1;
@@ -51,11 +57,7 @@ if (n == 3) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  for (i=0; i < icons.length; i++) {
-    icons[i].className = icons[i].className.replace(" icon-lit", "");
-  }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  icons[slideIndex - 1].className += " icon-lit";
 }
 
