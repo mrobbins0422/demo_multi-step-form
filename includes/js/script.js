@@ -39,7 +39,7 @@ if (n == 3) {
 }
 
   var i;
-  console.log(n);
+  //  console.log(n);
   var slides = document.getElementsByClassName("mySlides");
   // console.log(slides);
   var dots = document.getElementsByClassName("dot");

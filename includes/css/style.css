@@ -93,7 +93,7 @@ h2 {
 h3 {
   font-size: var(--fs-h3);
 }
-/* header.statu-bar
+/* header.status-bar
 ---------------------------------------------------------------------------- */
 .status-bar {
   min-width: 350px;
@@ -134,7 +134,6 @@ div[data-icon2]::before {
   top: 13px;
   left: -93px;
   background-color: var(--clr-light);
-/*   background-color: var(--clr-accent); */
   width: 94px;
   height: 3px;
 }
@@ -148,7 +147,6 @@ div[data-icon2]::after {
   top: -15px;
   left: 30px;
   background-color: var(--clr-light);
-/*   background-color: var(--clr-accent); */
   width: 100px;
   height: 3px;
 }
@@ -182,25 +180,6 @@ div.notlit[data-icon3] {
   display: none;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-/* switching out images for subforms */
-div.slide1.subform-1 {
-  background-color: antiquewhite;
-}
 /* form
 ---------------------------------------------------------------------------- */
 .card {
@@ -214,6 +193,44 @@ div.slide1.subform-1 {
   box-shadow: 0 0 7px rgb(99, 97, 97);
   animation: fade 250ms ease-in-out forwards;
 }
+.card {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1rem;
+  align-items: center;
+}
+h2 {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+h3.step-title {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.form-group {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+button[data-previous] {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+button[data-submit] {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+button[data-next] {
+  grid-column-start: 5;
+  grid-column-end: -1;
+}
+
+.step-title {
+  text-align: center;
+}
 
 .form-group {
   display: flex;
@@ -221,17 +238,14 @@ div.slide1.subform-1 {
   margin-bottom: .5rem;
   gap: .25em;
 }
-
 .form-group:last-child {
   margin: 0;
 }
-
 .form-group > label {
   font-weight: bold;
   font-size: .8em;
   color: #333;
 }
-
 .form-group > input {
   border: 1px solid #333;
   border-radius: .25em;
@@ -239,38 +253,22 @@ div.slide1.subform-1 {
   padding: .25em;
 }
 
-.step-title {
-  text-align: center;
-  padding-top: 0.25rem;
-  margin: 0 0 1rem 0;
-}
 button {
   color: var(--clr-light);
   font-weight: var(--fw-bold);
+  cursor: pointer;
   background-color: var(--clr-accent);
   padding: 0.5rem 1.5rem;
 }
-.card-buttons {
-  position: relative;
-/*   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between; */
+button:hover {
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.24),0 9px 25px 0 rgba(0,0,0,0.19);
+  border-style: groove;
 }
-button[data-next],
-button[data-submit] {
-  float: right;
-}
+/* animation
+------------------------------------ */
+
 div.card.active {
   animation: slide 250ms 125ms ease-in-out both;
-}
-
-.multi-step-form {
-/*   overflow: hidden; */
-  position: relative;
-}
-
-.hide {
-  display: none;
 }
 
 @keyframes slide {
@@ -299,35 +297,6 @@ div.card.active {
   }
 }
 
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -345,8 +314,24 @@ div.card.active {
   from {opacity: .4}
   to {opacity: 1}
 }
+
 /* footer
 ---------------------------------------------------------------------------- */
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #717171;
+}
 
 footer {
   text-align: center;
