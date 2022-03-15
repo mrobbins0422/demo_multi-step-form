@@ -132,7 +132,7 @@ div[data-icon2]::before {
   display: block;
   position: relative;
   top: 13px;
-  left: -93px;
+  left: -94px;
   background-color: var(--clr-light);
 /*   background-color: var(--clr-accent); */
   width: 94px;
@@ -181,26 +181,20 @@ div.notlit[data-icon3] {
 .mySlides {
   display: none;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-/* switching out images for subforms */
-div.slide1.subform-1 {
-  background-color: antiquewhite;
-}
+
 /* form
 ---------------------------------------------------------------------------- */
 .card {
@@ -209,36 +203,31 @@ div.slide1.subform-1 {
   background-color: white;
   padding: 1.5rem;
   border: 1px solid #333;
-  border-radius: .2rem;
+  border-radius: 3px;
   margin: 0 auto;
   box-shadow: 0 0 7px rgb(99, 97, 97);
   animation: fade 250ms ease-in-out forwards;
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: .5rem;
   gap: .25em;
 }
-
 .form-group:last-child {
   margin: 0;
 }
-
 .form-group > label {
   font-weight: bold;
   font-size: .8em;
   color: #333;
 }
-
 .form-group > input {
   border: 1px solid #333;
   border-radius: .25em;
   font-size: 1rem;
   padding: .25em;
 }
-
 .step-title {
   text-align: center;
   padding-top: 0.25rem;
@@ -263,16 +252,13 @@ button[data-submit] {
 div.card.active {
   animation: slide 250ms 125ms ease-in-out both;
 }
-
 .multi-step-form {
 /*   overflow: hidden; */
   position: relative;
 }
-
 .hide {
   display: none;
 }
-
 @keyframes slide {
   0% {
     transform: translateX(200%);
@@ -298,7 +284,6 @@ div.card.active {
     transform: scale(0);
   }
 }
-
 
 /* Caption text */
 .text {
