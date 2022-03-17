@@ -252,6 +252,7 @@ button[data-next] {
   font-size: 1rem;
   padding: .25em;
 }
+
 button {
   color: var(--clr-light);
   font-weight: var(--fw-bold);
@@ -269,6 +270,7 @@ button:hover {
 div.card.active {
   animation: slide 250ms 125ms ease-in-out both;
 }
+
 @keyframes slide {
   0% {
     transform: translateX(200%);
