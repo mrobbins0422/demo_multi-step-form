@@ -341,4 +341,15 @@ footer span {
 }
 footer a {
   font-size: 0.8rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--clr-dark);
+  font-weight: var(--fw-medium);
+  text-decoration: underline;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
 }
